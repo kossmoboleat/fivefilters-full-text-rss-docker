@@ -14,7 +14,7 @@ RUN	git clone https://github.com/fivefilters/ftr-site-config . && \
 		git reset --hard 8e6f5b09786555a26bc46b37dbd71b306e2c4312
 
 
-FROM	php:5-apache
+FROM	php:apache
 
 COPY --from=gitsrc /ftr /var/www/html
 COPY --from=gitconfig /ftr-site-config/.* /ftr-site-config/* /var/www/html/site_config/standard/
