@@ -5,13 +5,13 @@
 FROM	alpine/git as gitsrc
 WORKDIR /ftr
 RUN	git clone https://bitbucket.org/fivefilters/full-text-rss.git . && \
-		git reset --hard a5a4a192bc3724a80a18f3ac296e4b5070cd2349
+		git reset --hard 384d52fd83361ffd6e7f28bd39b322970a015a28
 
 
 FROM	alpine/git as gitconfig
 WORKDIR	/ftr-site-config
 RUN	git clone https://github.com/fivefilters/ftr-site-config . && \
-		git reset --hard 0e57cc7dddad5ba28181ea06f70c475caab2081a
+		git reset --hard 8e6f5b09786555a26bc46b37dbd71b306e2c4312
 
 
 FROM	php:5-apache
